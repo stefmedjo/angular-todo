@@ -1,0 +1,8 @@
+<div class="content">
+    <form [formGroup]="formGroup" (ngSubmit)="submit()">
+        <input type="text" class="form-control" formControlName="desc" required placeholder="What do you want to do?"/>
+    </form>
+    <div *ngFor="let todo of todos">
+        <app-todo-item [desc]='todo.desc' [done]='todo.done'></app-todo-item>
+    </div>
+</div>

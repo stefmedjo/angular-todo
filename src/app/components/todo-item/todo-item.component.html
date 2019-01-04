@@ -1,0 +1,16 @@
+<div class="item">
+  <div class="todo todo-icon">
+    <i class="ion ion-ios-checkmark" *ngIf="done == false" (click)="isDone()"></i>
+    <i class="ion ion-ios-checkmark green" *ngIf="done == true"></i>
+  </div>
+  <div class="todo todo-content">
+    <div *ngIf="done == true" class="closed">
+      {{ desc }}
+    </div>
+    <div *ngIf="done == false">
+      {{ desc }}
+    </div>
+  </div>  
+</div>
+
+
